@@ -17,5 +17,10 @@ pipeline{
                sh 'mvn jacoco:report'
             }
         }
+        stage('SCA:Owasp Dependency Check'){
+            steps{
+                sh 'mvn org.owasp:dependency-check-maven:check'
+            }
+        }
     }
 }
