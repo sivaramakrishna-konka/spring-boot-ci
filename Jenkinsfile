@@ -12,5 +12,10 @@ pipeline{
                sh 'mvn clean package'
             }
         }
+        stage('Jacaco Reports'){
+            steps{
+               sh 'mvn jacoco:report'
+            }
+        }
     }
 }
